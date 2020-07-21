@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<script type="application/ecmascript" src="http://webelement-localhost/helloworld.js"></script>
+	<script>
+		let exploreHelloWorldElement = () => {
+			let helloWorld = document.createElement('hello-world');
+			helloWorld.message = 'Message declared programatticaly in the script header, but utilised by the hello world component';
+			helloWorld.id = 'helloWorldElementId';
+			document.getElementById('programaticHelloWorld').appendChild(helloWorld);
+		}
+
+		window.addEventListener('DOMContentLoaded', exploreHelloWorldElement);
+	</script>
+<head>
+</head>
+<body>
+	
+	<hello-world message="Message declared in this markup, but utilised by the 'hello world' component"></hello-world>
+	<div id='programaticHelloWorld'></div>
+
+</body>
+</html>
